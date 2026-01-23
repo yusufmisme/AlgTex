@@ -1,30 +1,34 @@
 import java.util.Scanner; 
-public class main {
+public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+        Scanner inn = new Scanner(System.in);
         System.out.print("enter first constants:");
-        interpreter eq = new interpreter(in.nextLine());
+        interpreter eq = new interpreter(inn.nextLine());
         while (true){
             System.out.println(eq.getLatex()+"\nchose bruh");
-            String choice = in.nextLine();
+            String choice = inn.nextLine();
             if (choice.equals("add")){
                 System.out.println("by:");
-                eq.add(in.nextLine());
+                eq.add(inn.nextLine());
             }
             if (choice.equals("subtract")){
                 System.out.println("by:");
-                eq.subtract(in.nextLine());
+                eq.subtract(inn.nextLine());
             }
             if (choice.equals("multiply")){
                 System.out.println("by:");
-                eq.multiply(in.nextLine());
+                eq.multiply(inn.nextLine());
             }
             if (choice.equals("divide")){
                 System.out.println("by:");
-                eq.divideBy(in.nextLine());
+                eq.divideBy(inn.nextLine());
             }
             if (choice.equals("parens")){
                 eq.parens();
+            }
+            if (choice.equals("q")){
+                inn.close();
+                break;
             }
         }
     }

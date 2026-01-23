@@ -1,4 +1,5 @@
 public class interpreter {
+    //goals: build cursor mechanism and allow for more intricate manipulation
     private String latex;
 
     public interpreter(String initial){
